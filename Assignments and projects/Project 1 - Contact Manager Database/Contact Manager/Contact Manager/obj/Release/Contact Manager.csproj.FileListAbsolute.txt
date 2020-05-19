@@ -1,0 +1,14 @@
+F:\Fall 2018 UTD\CS 6360 DB Design\Assignment\Assignment 4\Contact Manager\Contact Manager\bin\Release\Contact Manager.exe.config
+F:\Fall 2018 UTD\CS 6360 DB Design\Assignment\Assignment 4\Contact Manager\Contact Manager\bin\Release\Contact Manager.exe
+F:\Fall 2018 UTD\CS 6360 DB Design\Assignment\Assignment 4\Contact Manager\Contact Manager\bin\Release\Contact Manager.pdb
+F:\Fall 2018 UTD\CS 6360 DB Design\Assignment\Assignment 4\Contact Manager\Contact Manager\bin\Release\EntityFramework.dll
+F:\Fall 2018 UTD\CS 6360 DB Design\Assignment\Assignment 4\Contact Manager\Contact Manager\bin\Release\EntityFramework.SqlServer.dll
+F:\Fall 2018 UTD\CS 6360 DB Design\Assignment\Assignment 4\Contact Manager\Contact Manager\bin\Release\EntityFramework.xml
+F:\Fall 2018 UTD\CS 6360 DB Design\Assignment\Assignment 4\Contact Manager\Contact Manager\bin\Release\EntityFramework.SqlServer.xml
+F:\Fall 2018 UTD\CS 6360 DB Design\Assignment\Assignment 4\Contact Manager\Contact Manager\obj\Release\Contact_Manager.ContactManager.resources
+F:\Fall 2018 UTD\CS 6360 DB Design\Assignment\Assignment 4\Contact Manager\Contact Manager\obj\Release\Contact_Manager.Properties.Resources.resources
+F:\Fall 2018 UTD\CS 6360 DB Design\Assignment\Assignment 4\Contact Manager\Contact Manager\obj\Release\Contact Manager.csproj.GenerateResource.cache
+F:\Fall 2018 UTD\CS 6360 DB Design\Assignment\Assignment 4\Contact Manager\Contact Manager\obj\Release\Contact Manager.csproj.CoreCompileInputs.cache
+F:\Fall 2018 UTD\CS 6360 DB Design\Assignment\Assignment 4\Contact Manager\Contact Manager\obj\Release\Contact Manager.csproj.CopyComplete
+F:\Fall 2018 UTD\CS 6360 DB Design\Assignment\Assignment 4\Contact Manager\Contact Manager\obj\Release\Contact Manager.exe
+F:\Fall 2018 UTD\CS 6360 DB Design\Assignment\Assignment 4\Contact Manager\Contact Manager\obj\Release\Contact Manager.pdb

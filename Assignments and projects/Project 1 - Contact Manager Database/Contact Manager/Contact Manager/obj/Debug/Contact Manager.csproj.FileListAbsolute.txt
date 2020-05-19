@@ -1,0 +1,29 @@
+F:\Fall 2018 UTD\CS 6360 DB Design\Assignment\Assignment 4\Contact Manager\Contact Manager\bin\Debug\Contact Manager.exe.config
+F:\Fall 2018 UTD\CS 6360 DB Design\Assignment\Assignment 4\Contact Manager\Contact Manager\bin\Debug\Contact Manager.exe
+F:\Fall 2018 UTD\CS 6360 DB Design\Assignment\Assignment 4\Contact Manager\Contact Manager\bin\Debug\Contact Manager.pdb
+F:\Fall 2018 UTD\CS 6360 DB Design\Assignment\Assignment 4\Contact Manager\Contact Manager\obj\Debug\Contact_Manager.ContactManager.resources
+F:\Fall 2018 UTD\CS 6360 DB Design\Assignment\Assignment 4\Contact Manager\Contact Manager\obj\Debug\Contact_Manager.Properties.Resources.resources
+F:\Fall 2018 UTD\CS 6360 DB Design\Assignment\Assignment 4\Contact Manager\Contact Manager\obj\Debug\Contact Manager.csproj.GenerateResource.cache
+F:\Fall 2018 UTD\CS 6360 DB Design\Assignment\Assignment 4\Contact Manager\Contact Manager\obj\Debug\Contact Manager.csproj.CoreCompileInputs.cache
+F:\Fall 2018 UTD\CS 6360 DB Design\Assignment\Assignment 4\Contact Manager\Contact Manager\obj\Debug\Contact Manager.exe
+F:\Fall 2018 UTD\CS 6360 DB Design\Assignment\Assignment 4\Contact Manager\Contact Manager\obj\Debug\Contact Manager.pdb
+F:\Fall 2018 UTD\CS 6360 DB Design\Assignment\Assignment 4\Contact Manager\Contact Manager\bin\Debug\EntityFramework.dll
+F:\Fall 2018 UTD\CS 6360 DB Design\Assignment\Assignment 4\Contact Manager\Contact Manager\bin\Debug\EntityFramework.SqlServer.dll
+F:\Fall 2018 UTD\CS 6360 DB Design\Assignment\Assignment 4\Contact Manager\Contact Manager\bin\Debug\EntityFramework.xml
+F:\Fall 2018 UTD\CS 6360 DB Design\Assignment\Assignment 4\Contact Manager\Contact Manager\bin\Debug\EntityFramework.SqlServer.xml
+F:\Fall 2018 UTD\CS 6360 DB Design\Assignment\Assignment 4\Contact Manager\Contact Manager\obj\Debug\Contact Manager.csproj.CopyComplete
+F:\Git\Database-Design\Assignment\Assignment 4\Contact Manager\Contact Manager\bin\Debug\Contact Manager.exe.config
+F:\Git\Database-Design\Assignment\Assignment 4\Contact Manager\Contact Manager\bin\Debug\Contact Manager.exe
+F:\Git\Database-Design\Assignment\Assignment 4\Contact Manager\Contact Manager\bin\Debug\Contact Manager.pdb
+F:\Git\Database-Design\Assignment\Assignment 4\Contact Manager\Contact Manager\bin\Debug\EntityFramework.dll
+F:\Git\Database-Design\Assignment\Assignment 4\Contact Manager\Contact Manager\bin\Debug\EntityFramework.SqlServer.dll
+F:\Git\Database-Design\Assignment\Assignment 4\Contact Manager\Contact Manager\bin\Debug\EntityFramework.xml
+F:\Git\Database-Design\Assignment\Assignment 4\Contact Manager\Contact Manager\bin\Debug\EntityFramework.SqlServer.xml
+F:\Git\Database-Design\Assignment\Assignment 4\Contact Manager\Contact Manager\obj\Debug\Contact Manager.csprojAssemblyReference.cache
+F:\Git\Database-Design\Assignment\Assignment 4\Contact Manager\Contact Manager\obj\Debug\Contact_Manager.ContactManager.resources
+F:\Git\Database-Design\Assignment\Assignment 4\Contact Manager\Contact Manager\obj\Debug\Contact_Manager.Properties.Resources.resources
+F:\Git\Database-Design\Assignment\Assignment 4\Contact Manager\Contact Manager\obj\Debug\Contact Manager.csproj.GenerateResource.cache
+F:\Git\Database-Design\Assignment\Assignment 4\Contact Manager\Contact Manager\obj\Debug\Contact Manager.csproj.CoreCompileInputs.cache
+F:\Git\Database-Design\Assignment\Assignment 4\Contact Manager\Contact Manager\obj\Debug\Contact Manager.csproj.CopyComplete
+F:\Git\Database-Design\Assignment\Assignment 4\Contact Manager\Contact Manager\obj\Debug\Contact Manager.exe
+F:\Git\Database-Design\Assignment\Assignment 4\Contact Manager\Contact Manager\obj\Debug\Contact Manager.pdb

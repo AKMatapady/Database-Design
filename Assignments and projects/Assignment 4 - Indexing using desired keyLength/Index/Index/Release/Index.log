@@ -1,0 +1,8 @@
+﻿  pch.cpp
+  Index.cpp
+c:\users\hp\source\repos\index\index\index.cpp(91): warning C4244: '=': conversion from 'std::streamoff' to 'unsigned long', possible loss of data
+c:\users\hp\source\repos\index\index\index.cpp(121): warning C4101: 'buffer': unreferenced local variable
+  Generating code
+  All 321 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Index.vcxproj -> C:\Users\hp\source\repos\Index\Release\Index.exe

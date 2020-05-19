@@ -1,0 +1,7 @@
+-c data.txt data.idx 15
+
+-l data.idx data.txt 15
+
+-c dataB.txt dataB.idx 4
+
+-l dataB.idx dataB.txt 4

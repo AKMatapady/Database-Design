@@ -1,0 +1,1 @@
+Assignment - run a bunch of queries described in CS6360.docx on Microsoft SQL Server

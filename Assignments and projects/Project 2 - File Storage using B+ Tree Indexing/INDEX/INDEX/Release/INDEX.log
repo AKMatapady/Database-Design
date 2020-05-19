@@ -1,0 +1,21 @@
+﻿  pch.cpp
+  INDEX.cpp
+f:\fall 2018 utd\cs 6360 db design\assignment\assignment 6\index\index\index.cpp(348): warning C4477: 'printf' : format string '%ld' requires an argument of type 'long', but variadic argument 1 has type 'unsigned __int64'
+  f:\fall 2018 utd\cs 6360 db design\assignment\assignment 6\index\index\index.cpp(348): note: consider using '%lld' in the format string
+  f:\fall 2018 utd\cs 6360 db design\assignment\assignment 6\index\index\index.cpp(348): note: consider using '%I64d' in the format string
+f:\fall 2018 utd\cs 6360 db design\assignment\assignment 6\index\index\index.cpp(418): warning C4244: 'initializing': conversion from 'std::streamoff' to 'unsigned long', possible loss of data
+f:\fall 2018 utd\cs 6360 db design\assignment\assignment 6\index\index\index.cpp(454): warning C4244: 'initializing': conversion from 'std::streamoff' to 'unsigned long', possible loss of data
+f:\fall 2018 utd\cs 6360 db design\assignment\assignment 6\index\index\index.cpp(676): warning C4244: 'initializing': conversion from 'std::streamoff' to 'unsigned long', possible loss of data
+f:\fall 2018 utd\cs 6360 db design\assignment\assignment 6\index\index\index.cpp(758): warning C4477: 'printf' : format string '%ld' requires an argument of type 'long', but variadic argument 1 has type 'unsigned __int64'
+  f:\fall 2018 utd\cs 6360 db design\assignment\assignment 6\index\index\index.cpp(758): note: consider using '%lld' in the format string
+  f:\fall 2018 utd\cs 6360 db design\assignment\assignment 6\index\index\index.cpp(758): note: consider using '%I64d' in the format string
+f:\fall 2018 utd\cs 6360 db design\assignment\assignment 6\index\index\index.cpp(827): warning C4477: 'printf' : format string '%ld' requires an argument of type 'long', but variadic argument 1 has type 'unsigned __int64'
+  f:\fall 2018 utd\cs 6360 db design\assignment\assignment 6\index\index\index.cpp(827): note: consider using '%lld' in the format string
+  f:\fall 2018 utd\cs 6360 db design\assignment\assignment 6\index\index\index.cpp(827): note: consider using '%I64d' in the format string
+f:\fall 2018 utd\cs 6360 db design\assignment\assignment 6\index\index\index.cpp(995): warning C4473: 'printf' : not enough arguments passed for format string
+  f:\fall 2018 utd\cs 6360 db design\assignment\assignment 6\index\index\index.cpp(995): note: placeholders and their parameters expect 5 variadic arguments, but 0 were provided
+  f:\fall 2018 utd\cs 6360 db design\assignment\assignment 6\index\index\index.cpp(995): note: the missing variadic argument 1 is required by format string '%s'
+  Generating code
+  All 222 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  INDEX.vcxproj -> F:\Fall 2018 UTD\CS 6360 DB Design\Assignment\Assignment 6\INDEX\Release\INDEX.exe

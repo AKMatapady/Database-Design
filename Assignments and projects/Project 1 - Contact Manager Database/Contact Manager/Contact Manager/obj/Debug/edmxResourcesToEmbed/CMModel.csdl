@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ContactManModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Address">
+    <Key>
+      <PropertyRef Name="AddressID" />
+    </Key>
+    <Property Name="AddressID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ZipCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="AddressAddressLines" Relationship="Self.FK_AddressAddressLines_Address" FromRole="Address" ToRole="AddressAddressLines" />
+  </EntityType>
+  <EntityType Name="AddressAddressLine">
+    <Key>
+      <PropertyRef Name="AddressID" />
+      <PropertyRef Name="AddressLine" />
+    </Key>
+    <Property Name="AddressID" Type="Int32" Nullable="false" />
+    <Property Name="AddressLine" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Address" Relationship="Self.FK_AddressAddressLines_Address" FromRole="AddressAddressLines" ToRole="Address" />
+  </EntityType>
+  <EntityType Name="CallHistory">
+    <Key>
+      <PropertyRef Name="CallHistoryID" />
+    </Key>
+    <Property Name="CallHistoryID" Type="Int32" Nullable="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Duration" Type="Time" Nullable="false" Precision="7" />
+    <Property Name="Call_DateTime" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Phone" Relationship="Self.FK_CallHistory_Phone" FromRole="CallHistory" ToRole="Phone" />
+  </EntityType>
+  <EntityType Name="Contact">
+    <Key>
+      <PropertyRef Name="ContactID" />
+    </Key>
+    <Property Name="ContactID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MiddleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DOB" Type="DateTime" Precision="3" />
+    <Property Name="Date_First_Met_On" Type="DateTime" Precision="3" />
+    <Property Name="Date_Contact_Added" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Gender" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="FamilyID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Email">
+    <Key>
+      <PropertyRef Name="EmailID" />
+    </Key>
+    <Property Name="EmailID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EmailType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Phone">
+    <Key>
+      <PropertyRef Name="Number" />
+    </Key>
+    <Property Name="Number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Date_NextCall" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="CallHistories" Relationship="Self.FK_CallHistory_Phone" FromRole="Phone" ToRole="CallHistory" />
+  </EntityType>
+  <Association Name="FK_AddressAddressLines_Address">
+    <End Role="Address" Type="Self.Address" Multiplicity="1" />
+    <End Role="AddressAddressLines" Type="Self.AddressAddressLine" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Address">
+        <PropertyRef Name="AddressID" />
+      </Principal>
+      <Dependent Role="AddressAddressLines">
+        <PropertyRef Name="AddressID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CallHistory_Phone">
+    <End Role="Phone" Type="Self.Phone" Multiplicity="1" />
+    <End Role="CallHistory" Type="Self.CallHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Phone">
+        <PropertyRef Name="Number" />
+      </Principal>
+      <Dependent Role="CallHistory">
+        <PropertyRef Name="PhoneNumber" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ContactManagerEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Addresses" EntityType="Self.Address" />
+    <EntitySet Name="AddressAddressLines" EntityType="Self.AddressAddressLine" />
+    <EntitySet Name="CallHistories" EntityType="Self.CallHistory" />
+    <EntitySet Name="Contacts" EntityType="Self.Contact" />
+    <EntitySet Name="Emails" EntityType="Self.Email" />
+    <EntitySet Name="Phones" EntityType="Self.Phone" />
+    <AssociationSet Name="FK_AddressAddressLines_Address" Association="Self.FK_AddressAddressLines_Address">
+      <End Role="Address" EntitySet="Addresses" />
+      <End Role="AddressAddressLines" EntitySet="AddressAddressLines" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CallHistory_Phone" Association="Self.FK_CallHistory_Phone">
+      <End Role="Phone" EntitySet="Phones" />
+      <End Role="CallHistory" EntitySet="CallHistories" />
+    </AssociationSet>
+    <FunctionImport Name="Add_AddressLines">
+      <Parameter Name="AddressID" Mode="In" Type="Int32" />
+      <Parameter Name="AddressLines" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Add_Contact">
+      <Parameter Name="FirstName" Mode="In" Type="String" />
+      <Parameter Name="MiddleName" Mode="In" Type="String" />
+      <Parameter Name="LastName" Mode="In" Type="String" />
+      <Parameter Name="BirthDate" Mode="In" Type="DateTime" />
+      <Parameter Name="Gender" Mode="In" Type="String" />
+      <Parameter Name="DateFirstMet" Mode="In" Type="DateTime" />
+      <Parameter Name="DateAdded" Mode="In" Type="DateTime" />
+      <Parameter Name="EmailID" Mode="In" Type="String" />
+      <Parameter Name="PhoneNo" Mode="In" Type="String" />
+      <Parameter Name="AddressLines" Mode="In" Type="String" />
+      <Parameter Name="City" Mode="In" Type="String" />
+      <Parameter Name="State" Mode="In" Type="String" />
+      <Parameter Name="Country" Mode="In" Type="String" />
+      <Parameter Name="ZipCode" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="Delete_Contact">
+      <Parameter Name="FirstName" Mode="In" Type="String" />
+      <Parameter Name="MiddleName" Mode="In" Type="String" />
+      <Parameter Name="LastName" Mode="In" Type="String" />
+      <Parameter Name="BirthDate" Mode="In" Type="DateTime" />
+      <Parameter Name="Gender" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(ContactManModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(ContactManModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="Update_Contact">
+      <Parameter Name="FirstName" Mode="In" Type="String" />
+      <Parameter Name="MiddleName" Mode="In" Type="String" />
+      <Parameter Name="LastName" Mode="In" Type="String" />
+      <Parameter Name="BirthDate" Mode="In" Type="DateTime" />
+      <Parameter Name="Gender" Mode="In" Type="String" />
+      <Parameter Name="DateFirstMet" Mode="In" Type="DateTime" />
+      <Parameter Name="DateAdded" Mode="In" Type="DateTime" />
+      <Parameter Name="EmailID" Mode="In" Type="String" />
+      <Parameter Name="PhoneNo" Mode="In" Type="String" />
+      <Parameter Name="AddressLines" Mode="In" Type="String" />
+      <Parameter Name="City" Mode="In" Type="String" />
+      <Parameter Name="State" Mode="In" Type="String" />
+      <Parameter Name="Country" Mode="In" Type="String" />
+      <Parameter Name="ZipCode" Mode="In" Type="String" />
+      <Parameter Name="NewFirstName" Mode="In" Type="String" />
+      <Parameter Name="NewMiddleName" Mode="In" Type="String" />
+      <Parameter Name="NewLastName" Mode="In" Type="String" />
+      <Parameter Name="NewBirthDate" Mode="In" Type="DateTime" />
+      <Parameter Name="NewGender" Mode="In" Type="String" />
+      <Parameter Name="NewDateFirstMet" Mode="In" Type="DateTime" />
+      <Parameter Name="NewDateAdded" Mode="In" Type="DateTime" />
+      <Parameter Name="NewEmailID" Mode="In" Type="String" />
+      <Parameter Name="NewPhoneNo" Mode="In" Type="String" />
+      <Parameter Name="NewAddressLines" Mode="In" Type="String" />
+      <Parameter Name="NewCity" Mode="In" Type="String" />
+      <Parameter Name="NewState" Mode="In" Type="String" />
+      <Parameter Name="NewCountry" Mode="In" Type="String" />
+      <Parameter Name="NewZipCode" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+</Schema>
